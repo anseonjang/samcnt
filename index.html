@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 이름 - SAMSUNG C&T Corporation - slkckNav </title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 구글머트리얼아이콘CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <!-- 나눔스퀘어 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-nanum@1.0.0/nanumsquare.css">
+    <script src="./js/jquery.slicknav.js"></script>
+    <script src="./js/slick-animation.min.js"></script>
+    <script src="./js/slick.1.9.0.min.js"></script>
+
+    <script>
+        $(function () {
+
+            // slicknnav플러그인 이용하여 메뉴초기화
+            $('#nav-menu').slicknav();
+            // 대메뉴에 마우스 올렸을때 서브메뉴 보여줌
+            $('#nav-menu >li > a').mouseenter(function () {
+                $('#nav-menu >li>ul').stop().slideDown('fast');
+                $('.menu-bg').stop().slideDown();
+            });
+            // 대메뉴에서 마우스 벗어났을때 서브메뉴 닫아줌
+            $('.menu').mouseleave(function () {
+                $('#nav-menu >li>ul').fadeOut('fast');
+                $('.menu-bg').fadeOut();
+            });
+            // .slicknav() - 네비게이션 메뉴 생성시 사용  
+            // news slide - .slick()- 슬라이더 기능을 추가 
+            $(".news_slide").slick({
+                // 슬라이드 자동재생
+                autoplay: true,
+                // autoplay:false,
+                // 수직방향 전환
+                vertical: true,
+                // 무한반복 허용
+                infinite: true,
+                // 한번에 한개의 슬라이드
+                slidesToShow: 1,
+                // 점표시
+                dots: false,
+                // 화살표 클릭시 슬라이드 전환 허용
+                arrows: true,
+                // 속도
+                speed: 500, //0.5초
+                // 슬라이드이동
+                focusOnSelect: true,
+                // 화살표 버튼 설정
+                prevArrow: $("#banner_prev"),
+                nextArrow: $("#banner_next")
+            });
+            // banner slide 
+            $(".banner_slide").slick({
+                autoplay: false,
+                infinite: true,
+                slidesToShow: 1,
+                dots: false,
+                arrows: false,
+                speed: 500,
+                focusOnSelect: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- #wrap>header>.top_header>.inner>h1>a>img -->
+    <div id="wrap">
+        <!-- =============================================
+            header
+         ================================================-->
+        <header>
+            <!-- 로고, 각 부문 -->
+            <div class="top_header">
+                <div class="inner">
+                    <!-- logo -->
+                    <h1><a href="./index.html"><img src="./images/logo.svg" alt="삼성물산로고"></a></h1>
+                    <!-- 건설,상사,패션,리조트 -->
+                    <!-- ul>li*4>a{건설부문} -->
+                    <ul>
+                        <li><a href="#">건설부문</a></li>
+                        <li><a href="#">상사부문</a></li>
+                        <li><a href="#">패션부문</a></li>
+                        <li><a href="#">리조트부문</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 대메뉴 -->
+            <!-- nav.menu>.menu-inner>ul.nav-list#nav-menu>li.in_menu0$*5>a -->
+            <nav class="menu">
+                <div class="menu-inner">
+                    <ul class="nav-list" id="nav-menu">
+                        <li class="in_menu01"><a href="#">삼성물산소개</a>
+                            <!-- ul>li*5>a -->
+                            <ul>
+                                <li><a href="#">기업소개</a></li>
+                                <li><a href="#">연혁</a></li>
+                                <li><a href="#">인재채용</a></li>
+                                <li><a href="#">고객문의</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+                        <li class="in_menu02"><a href="#">사업분야</a>
+                            <ul>
+                                <li><a href="#">건설부문</a></li>
+                                <li><a href="#">상사부문</a></li>
+                                <li><a href="#">패션부문</a></li>
+                                <li><a href="#">리조트부문</a></li>
+                            </ul>
+                        </li>
+                        <li class="in_menu03"><a href="#">ESG</a>
+                            <ul>
+                                <li><a href="#">전략 및 체계</a></li>
+                                <li><a href="#">환경</a></li>
+                                <li><a href="#">사회</a></li>
+                                <li><a href="#">지배구조</a></li>
+                                <li><a href="#">정책</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="in_menu04"><a href="#">IR</a>
+                            <ul>
+                                <li><a href="#">IR 일정</a></li>
+                                <li><a href="#">공시정보</a></li>
+                                <li><a href="#">재무정보</a></li>
+                                <li><a href="#">주식정보</a></li>
+                                <li><a href="#">주주총회</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="in_menu05"><a href="#">뉴스룸</a>
+                            <ul>
+                                <li><a href="#">전체기사</a></li>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">SNS</a></li>
+                                <li><a href="#">미디어 라이브러리</a></li>
+                                <li><a href="#">이슈와 팩트</a></li>
+                            </ul>
+                        </li>
+                        <li class="in_menu06"><a href="#">사회공헌</a>
+                            <ul>
+                                <li><a href="#">상생의 정신</a></li>
+                                <li><a href="#">장학금 프로그램</a></li>
+                                <li><a href="#">교육시설지원</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="menu-bg"></div>
+            </nav>
+            <!--  mobile -->
+
+            <!-- #mobile_menu>h1>a>img -->
+            <div id="mobile_menu">
+                <h1><a href="#"><img src="./images/logo.svg" alt="삼성물산로고"></a></h1>
+            </div>
+        </header>
+        <!-- .main_visual>.visual_wrap>.visual_slide>.slide_img>img -->
+        <!-- =============================================
+            main_visual
+         ================================================-->
+        <div class="main_visual">
+            <!-- video -->
+            <div class="video-container">
+                <!-- video -->
+                <video src="./src/samseunMainVideo.mp4" autoplay muted loop>
+                </video>
+                <!-- autoplay(자동플레이) muted(음소거) loop(반복) -->
+
+                <!-- 왼쪽 텍스트, 오른쪽 뉴스박스 -->
+                <div class="visual_wrap">
+                    <div class="visual_slide">
+                        <div class="slide">
+                            <!-- text -->
+                            <!-- .slide__content>.slide__content__head.inner -->
+                            <div class="slide__content">
+                                <!-- 좌측 텍스트 -->
+                                <div class="slide__content__head inner">
+                                    <h2>삼성물산 건설부문</h2>
+                                    <h3>공간에 <span>가치를 더하다</span> </h3>
+                                    <h4>하늘에서 가장 먼저 닿는 곳 브르즈칼리파</h4>
+                                </div>
+                                <!-- slide banner -->
+                                <div class="inner_banner">
+                                    <div class="inner">
+                                        <div class="inner_box">
+                                            <div class="news">
+                                                <h2>그룹원 <span>채용공고</span></h2>
+                                                <!-- .news_box>.inner_news_box     -->
+                                                <div class="news_box">
+                                                    <div class="inner_news_box">
+                                                        <!-- 화살표 -->
+                                                        <!-- .arrow>span#banner_prev.material-icons -->
+                                                        <div class="arrow">
+                                                            <span id="banner_prev"
+                                                                class="material-icons">arrow_back</span>
+                                                            <span id="banner_next"
+                                                                class="material-icons">arrow_forward</span>
+                                                        </div>
+                                                        <!-- 뉴스 텍스트 슬라이드 -->
+                                                        <!-- .news_slide>.items>p*2 -->
+                                                        <div class="news_slide">
+                                                            <div class="items">
+                                                                <p>2024.7.10 ~ 7.23</p>
+                                                                <p>[삼성물산 건설부문] 프론트앤드개발자 채용</p>
+                                                            </div>
+                                                            <div class="items">
+                                                                <p>2024.7.15 ~ 7.30</p>
+                                                                <p>[삼성물산 패션부문] 프로덕트 디자이너 채용</p>
+                                                            </div>
+                                                            <div class="items">
+                                                                <p>2024.7.15 ~ 7.27</p>
+                                                                <p>[삼성물산 리조트부문] 웹퍼블리셔 채용</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 슬릭 슬라이드 -->
+                                            <!-- .banner>.banner_slide>.items>img -->
+                                            <div class="banner">
+                                                <div class="banner_slide">
+                                                    <div class="items"><img src="./images/banner1.jpg" alt="banner1">
+                                                    </div>
+                                                    <div class="items"><img src="./images/banner2.jpg" alt="banner2">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- box -->
+            <!-- .inner_banner>.inner>.inner_box>.news>h2 -->
+
+        </div>
+        <!-- =============================================
+            our business
+         ================================================-->
+        <!-- section.ourBusiness -->
+        <section class="ourBusiness">
+            <h2> OUR BUSINESS  </h2>
+            <p>삶의 가치를 높이는 SAMSUNG C &amp; T 기술</p>
+            <!-- 아코디언 콘텐츠 -->
+             <!-- .businessList>.option>.img+p+span+img+bg -->
+             <div class="businessList">
+                <!-- 1 -->
+                <div class="option">
+                    <div class="img"></div>
+                    <p>혁신</p>
+                    <span>Building the World with Innovation</span><img src="./images/w-arrow.svg" alt="화살표">
+                    <div class="bg"></div>
+                </div>
+                <!-- 2 -->
+                <div class="option">
+                    <div class="img"></div>
+                    <p>지속가능</p>
+                    <span>Sustainable Construction with Samsung C&T</span><img src="./images/w-arrow.svg" alt="화살표">
+                    <div class="bg"></div>
+                </div>
+                <!-- 3 -->
+                <div class="option">
+                    <div class="img"></div>
+                    <p>가치창출</p>
+                    <span>Creating Value through Innovationn</span><img src="./images/w-arrow.svg" alt="화살표">
+                    <div class="bg"></div>
+                </div>
+                <!-- 4 -->
+                <div class="option">
+                    <div class="img"></div>
+                    <p>첨단기술</p>
+                    <span>Smart Cities Built with Advanced Technology</span><img src="./images/w-arrow.svg" alt="화살표">
+                    <div class="bg"></div>
+                </div>
+             </div>
+        </section>
+
+        <!-- =============================================
+            BBS
+         ================================================-->
+
+        <section class="bbs">
+            <h2> NEWS </h2>
+            <p>지속 가능한 내일을 만드는 첨단 기술, 고객의 성공을 위한 삼성물산</p>
+        </section>
+
+        <!-- =============================================
+           footer
+         ================================================-->
+
+
+    </div>
+
+</body>
+
+</html>
